@@ -49,4 +49,4 @@ class Paginator:
             }]
         }
         cursor = self.collection.find(condition).sort(filter_field, sort_direction).limit(page_size)
-        return sorted(list(cursor), key=lambda k: k[filter_value])
+        return sorted(list(cursor), key=lambda k: k[filter_field])
